@@ -1,0 +1,42 @@
+// Performing Merge Sort on a Doubly Linked List :-
+
+struct node* sortDoubly(struct node* head){
+    if(head == NULL || head->next == NULL){
+        return head;
+    }
+    struct node* mid = getMid(head);
+    head = sortDoubly(head);
+    mid = sortDoubly(mid);
+    return merge(head,mid);
+}
+
+struct node* getMid(struct node* head){
+    struct node* fast = head;
+    struct node* slow = head;
+    while(fast->next != NULL && fast->next->next != NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    struct node* temp = slow->next;
+    slow->next = NULL;
+    return temp;
+}
+
+struct node* merge(struct node* head, struct node* mid){
+    if(head == NULL)
+      return mid;
+    if(mid == NULL)
+      return head;
+    if(head->data < mid->data){
+        head->next = merge(head->next,mid);
+        head->next->prev = head;
+        head->prev = NULL;
+        return head;
+    }
+    else{
+        mid->next = merge(head,mid->next);
+        mid->next->prev = mid;
+        mid->prev = NULL;
+        return mid;
+    }
+}

@@ -1,0 +1,14 @@
+Iterative way to reverse a doubly linked list:-
+
+struct node* reverse(struct node* head){
+    struct node* temp,back;
+    temp=head;
+    back=NULL;
+    while(temp!=NULL){
+        back=temp->prev;
+        temp->prev=temp->next;
+        temp->next=back;
+        temp=temp->prev;
+    }
+    return back->prev;
+}

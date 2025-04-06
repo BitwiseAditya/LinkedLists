@@ -1,0 +1,46 @@
+   1) A linear collection of data elements.
+   2) Each element is called a node.
+   3) Each node has two parts: data and address of next node.
+   4) The last node has address of NULL.
+   5) The first node is called head node.
+   6) The last node is called tail node.
+   7) The address of head node is stored in a pointer variable called head.
+   8) The address of tail node is stored in a pointer variable called tail.
+    9) The address of next node is stored in a pointer variable called next.
+    10) The address of previous node is stored in a pointer variable called prev.
+    11) The address of current node is stored in a pointer variable called current.
+    12) Easier insertion and deletion of items relative to arrays.
+    13) Time complexity for accessing an element is O(n), which in arrays is O(1).
+    14) Binary search is not possible in case of Linked List.
+    15) It is of Dynamic Size.
+    16) 4 types- Singly, Circular, Doubly , Doubly Circular.
+    17) In singly linked list:-
+         . A single link to next node.
+         . Only forward traversal is possible.
+        In doubly linked list:-
+         . 3 parts- 1 data part and two pointer parts.
+         . 1 pointer to previous node, 2nd pointer to next node. 
+        In circular linked list:-
+         . A variation of singly linked list.
+         . Last Node points to the first node instead of Null.
+        In doubly circular linked list:-
+         . A variation of doubly linked list.
+         . Last node points to the first node instead of Null. 
+    18) Factors on the basis of which Linked List and Arrays can be compared:-
+         . Cost of accessing an element.
+         . Memory Requirement.
+         . Memory utilization.
+         . Cost of inserting an element( at beginning, end or specific position).
+         . Cost of deleting an element( at beginning, end or specific position).
+         (
+            for inserting or deleting element from an array:-
+            . from beginning- O(n)
+            . from end- O(1)
+            . from specific position- O(n)
+            for inserting or deleting node from a linked list:-
+            . from beginning- O(1)
+            . from end- O(n)
+            . from specific position- O(n). 
+         )
+         . Ease of use.
+         . Search operations possible.
